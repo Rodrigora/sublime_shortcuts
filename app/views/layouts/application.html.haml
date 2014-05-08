@@ -24,19 +24,11 @@
           %span.icon-bar
           %span.icon-bar
           %span.icon-bar
-        %a.navbar-brand(href="#") SublimeShortcuts
+        %a.navbar-brand(href="#/") App
         .navbar-collapse.collapse.navbar-responsive-collapse
           %ul.nav.navbar-nav
 
     .container
-      .row
-        .col-lg-3
-          .well.sidebar-nav
-            %h3 Links
-            %ul.nav.nav-list
-              %li.nav-header
-        .col-lg-9
-          =# bootstrap_flash
-          = yield
+      = yield
       %footer
-        %p &copy; Company 2014
+        %p footer

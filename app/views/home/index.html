@@ -1,0 +1,43 @@
+<div class="row" id="app-container">
+
+</div>
+
+<script type="text/x-handlebars">
+    <div class="col-lg-3">
+      <div class="well sidebar-nav">
+        <h3>Links</h3>
+        <ul class="nav nav-list">
+          <li class="nav-header">
+          {{#link-to 'index'}}Home{{/link-to}}
+          </li>
+          <li class="nav-header">
+            {{#link-to 'shortcuts'}}Shortcuts{{/link-to}}
+          </li>
+          <li class="nav-header">
+          </li>
+          <li class="nav-header">
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-lg-9">
+      {{outlet}}
+    </div>
+</script>
+
+<script type="text/x-handlebars" data-template-name='shortcuts'>
+
+  {{#each}}
+    <div class="row">
+      <div class="col-md-8"><pre>{{title}}</pre></div>
+      <div class="col-md-4"><pre>{{key}}</pre></div>
+    </div>
+  {{else}}
+    <div class='row'>
+      <div class='alert alert-info'>No shortcut yet. <strong>Create first above!</strong></div>
+    </div>
+  {{/each}}
+
+
+</script>
+

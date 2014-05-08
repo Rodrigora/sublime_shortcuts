@@ -1,7 +1,11 @@
 window.App = Ember.Application.create({
-  LOG_TRANSACTIONS: true
+  LOG_TRANSACTIONS: true,
+  rootElement: '#app-container'
 });
 
-App.ApplicationAdapter = DS.LSAdapter.extend({
-  namespace: 'app-emberjs'
-});
+App.ApplicationAdapter = DS.FixtureAdapter.extend();
+
+//App.ApplicationAdapter = DS.LSAdapter.extend({
+  // namespace: 'app-emberjs'
+// });
+
