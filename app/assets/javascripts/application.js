@@ -16,6 +16,8 @@
 //= require handlebars-v1.3.0
 //= require ember-v1.5.1
 //= require ember-data
+//= require localstorage_adapter
 //= require bootstrap
 //= require bootstrap_init
+//= require ember/app
 //= require_tree .

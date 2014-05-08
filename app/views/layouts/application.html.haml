@@ -27,23 +27,16 @@
         %a.navbar-brand(href="#") SublimeShortcuts
         .navbar-collapse.collapse.navbar-responsive-collapse
           %ul.nav.navbar-nav
-            %li= link_to "Link 1", "/path1"
-            %li= link_to "Link 2", "/path2"
-            %li= link_to "Link 3", "/path3"
-            %li= link_to "Link 3", "/path3"
 
     .container
       .row
+        .col-lg-3
+          .well.sidebar-nav
+            %h3 Links
+            %ul.nav.nav-list
+              %li.nav-header
         .col-lg-9
           =# bootstrap_flash
           = yield
-        .col-lg-3
-          .well.sidebar-nav
-            %h3 Sidebar
-            %ul.nav.nav-list
-              %li.nav-header Sidebar
-              %li= link_to "Link 1", "/path1"
-              %li= link_to "Link 2", "/path2"
-              %li= link_to "Link 3", "/path3"
       %footer
         %p &copy; Company 2014
