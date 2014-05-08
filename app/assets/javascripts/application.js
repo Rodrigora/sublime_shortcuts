@@ -17,4 +17,5 @@
 //= require ember-v1.5.1
 //= require ember-data
 //= require bootstrap
+//= require bootstrap_init
 //= require_tree .
