@@ -3,9 +3,9 @@ window.App = Ember.Application.create({
   rootElement: '#app-container'
 });
 
-App.ApplicationAdapter = DS.FixtureAdapter.extend();
+//App.ApplicationAdapter = DS.FixtureAdapter.extend();
 
-//App.ApplicationAdapter = DS.LSAdapter.extend({
-  // namespace: 'app-emberjs'
-// });
+App.ApplicationAdapter = DS.LSAdapter.extend({
+  namespace: 'app-emberjs'
+});
 

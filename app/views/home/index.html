@@ -3,7 +3,7 @@
 </div>
 
 <script type="text/x-handlebars">
-    <div class="col-lg-3">
+    <div class="col-lg-2">
       <div class="well sidebar-nav">
         <h3>Links</h3>
         <ul class="nav nav-list">
@@ -20,21 +20,38 @@
         </ul>
       </div>
     </div>
-    <div class="col-lg-9">
+    <div class="col-lg-10">
       {{outlet}}
     </div>
 </script>
 
 <script type="text/x-handlebars" data-template-name='shortcuts'>
+  <div class="row" id='shortcut-form' role='form'>
+    <div class='col-md-7 form-group'>
+      {{input type="text" id="new-shortcut-title" class='form-control' placeholder="Shortcut description" value=newShortcutTitle }}
+    </div>
+    <div class='col-md-3'>
+      {{input type="text" id="new-shortcut-key" class='form-control' placeholder="Keys" value=newShortcutKey }}
+    </div>
+    <div class='col-md-2'>
+      <button {{action 'createShortcut'}} class='btn btn-primary'>Create</button>
+    </div>
+  </div>
 
-  {{#each}}
+  {{#each itemController='shortcut'}}
     <div class="row">
-      <div class="col-md-8"><pre>{{title}}</pre></div>
-      <div class="col-md-4"><pre><span class='kbd'>{{key}}</span></pre></div>
+      <div class="col-md-7"><pre>{{title}}</pre></div>
+      <div class="col-md-3"><pre><span class='kbd'>{{key}}</span></pre></div>
+      <div class='col-md-2'>
+        <!--<button {{action 'edit'}} class='btn btn-primary'>E</button>-->
+        <button {{action 'destroy'}} class='btn btn-danger'>D</button>
+      </div>
     </div>
   {{else}}
     <div class='row'>
-      <div class='alert alert-info'>No shortcut yet. <strong>Create first above!</strong></div>
+      <div class='col-md-12'>
+        <div class='alert alert-info '>No shortcut yet. <strong>Create first above!</strong></div>
+      </div>
     </div>
   {{/each}}
 
