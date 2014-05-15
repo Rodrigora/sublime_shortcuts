@@ -28,10 +28,10 @@
 <script type="text/x-handlebars" data-template-name='shortcuts'>
   <div class="row" id='shortcut-form' role='form'>
     <div class='col-md-7 form-group'>
-      {{input type="text" id="new-shortcut-title" class='form-control' placeholder="Shortcut description" value=newShortcutTitle action 'createShortcut' }}
+      {{input type="text" id="new-shortcut-title" class='form-control' placeholder="Shortcut description" action='createShortcut' value=newShortcutTitle  }}
     </div>
     <div class='col-md-3'>
-      {{input type="text" id="new-shortcut-key" class='form-control' placeholder="Keys" value=newShortcutKey action 'createShortcut' }}
+      {{input type="text" id="new-shortcut-key" class='form-control' placeholder="Keys" value=newShortcutKey action='createShortcut' }}
     </div>
     <div class='col-md-2'>
       <button {{action 'createShortcut'}} class='btn btn-primary'>Create</button>
