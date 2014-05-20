@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Title:
+  = @shortcut.title
+%p
+  %b Key:
+  = @shortcut.key
+
+= link_to 'Edit', edit_shortcut_path(@shortcut)
+\|
+= link_to 'Back', shortcuts_path

@@ -7,6 +7,7 @@
 #= require localstorage_adapter
 #= require_self
 #= require sublime_shortcuts
+#= require csrf
 
 # for more details see: http://emberjs.com/guides/application/
 window.SublimeShortcuts = Ember.Application.create
