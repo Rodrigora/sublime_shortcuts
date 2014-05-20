@@ -1,4 +1,4 @@
-App.ShortcutsController = Ember.ArrayController.extend({
+SublimeShortcuts.ShortcutsController = Ember.ArrayController.extend({
   actions: {
     createShortcut: function() {
 

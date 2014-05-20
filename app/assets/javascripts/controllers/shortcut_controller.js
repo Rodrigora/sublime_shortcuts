@@ -1,4 +1,4 @@
-App.ShortcutController = Ember.ObjectController.extend({
+SublimeShortcuts.ShortcutController = Ember.ObjectController.extend({
   actions: {
     destroy: function(){
       var shortcut = this.get('model');
